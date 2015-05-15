@@ -1,7 +1,7 @@
 {
   "name": "npmreserve",
   "version": "1.0.0",
-  "description": "Reserves a package name on NPM.",
+  "description": "Reserve package names on NPM.",
   "main": "lib/index.js",
   "directories": {
     "example": "example"
