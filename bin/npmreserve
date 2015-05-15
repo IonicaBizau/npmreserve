@@ -1,0 +1,36 @@
+#!/usr/bin/env node
+
+// Dependencies
+var NpmReserve = require("../lib")
+  , Clp = require("clp")
+  , Package = require("../package")
+  , Logger = require("bug-killer")
+  , Ul = require("ul")
+  ;
+
+// Configuration
+Logger.config.logLevel = 4;
+
+var nameOpt = new Clp.Option(["n", "name"], "The NPM package name.", "name")
+  , descOpt = new Clp.Option(["d", "desc"], "The NPM package description.", "description")
+  , otherFields = new Clp.Option(["o", "other-fields"], "Other package.json fields you want to include. The input will be parsed as JSON.", "json")
+  , parser = new Clp({
+        name: "NPM Reserve"
+      , version: Package.version
+      , exe: Package.name
+      , examples: [
+            "npmreserve -n 'foo'"
+          , "npmreserve -n 'bar' -o '{\"author\": \"`whoami`\"}'"
+        ]
+      , docs_url: "https://github.com/IonicaBizau/npmreserve"
+      , notes: "Use this with care. Do not abuse the things too much. Do not spam."
+      , process: true
+    }, [
+        nameOpt, descOpt, otherFields
+    ])
+  ;
+
+// Validate the name
+if (!nameOpt.is_provided) {
+    return Logger.log("Missing the name field.", "error");
+}
