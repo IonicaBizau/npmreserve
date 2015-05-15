@@ -3,13 +3,36 @@
 # npmreserve
 Reserve package names on NPM.
 
-Sometimes I hit an idea regarding to a new tool and to be sure that nobody
-takes it before me I created `npmreserve` – a tool for reserving package names on NPM.
+Sometimes I have ideas about new tools to build but I don't have the needed
+time to implement them. To be sure that *my idea is reserved* I created this
+tiny tool which reserves the name of the package on NPM. :bulb:
 
 ## Installation
 
 ```sh
 $ npm install -g npmreserve
+```
+
+### Usage
+```sh
+$ npmreserve -h
+Usage: npmreserve [options]
+
+Options:
+  -n, --name <name>          The NPM package name.
+  -d, --desc <description>   The NPM package description.
+  -o, --other-fields <json>  Other package.json fields you want to include. The
+                             input will be parsed as JSON.
+  -h, --help                 Displays this help.
+  -v, --version              Displays version information.
+
+Examples:
+  npmreserve -n 'foo'
+  npmreserve -n 'bar' -o "{\"author\": \"`whoami`\"}"
+
+Use this with care. Do not abuse the things too much. Do not spam.
+
+Documentation can be found at https://github.com/IonicaBizau/npmreserve
 ```
 
 ## Documentation
