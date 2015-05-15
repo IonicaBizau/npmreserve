@@ -22,5 +22,14 @@
   "bugs": {
     "url": "https://github.com/IonicaBizau/npmreserve/issues"
   },
-  "homepage": "https://github.com/IonicaBizau/npmreserve"
+  "homepage": "https://github.com/IonicaBizau/npmreserve",
+  "dependencies": {
+    "bug-killer": "^1.0.0",
+    "ul": "^2.1.0",
+    "clp": "^1.2.0",
+    "tmp": "^0.0.26",
+    "exec-limiter": "^1.0.0",
+    "validate-npm-package-name": "^2.2.0"
+  },
+  "devDependencies": {}
 }
