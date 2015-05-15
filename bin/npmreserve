@@ -20,7 +20,7 @@ var nameOpt = new Clp.Option(["n", "name"], "The NPM package name.", "name")
       , exe: Package.name
       , examples: [
             "npmreserve -n 'foo'"
-          , "npmreserve -n 'bar' -o '{\"author\": \"`whoami`\"}'"
+          , "npmreserve -n 'bar' -o \"{\\\"author\\\": \\\"`whoami`\\\"}\""
         ]
       , docs_url: "https://github.com/IonicaBizau/npmreserve"
       , notes: "Use this with care. Do not abuse the things too much. Do not spam."
@@ -34,3 +34,20 @@ var nameOpt = new Clp.Option(["n", "name"], "The NPM package name.", "name")
 if (!nameOpt.is_provided) {
     return Logger.log("Missing the name field.", "error");
 }
+
+// Other fields
+if (otherFields.is_provided) {
+    try {
+        otherFields.value = JSON.parse(otherFields.value);
+    } catch (e) {
+        return Logger.log("Invalid JSON input for other fields.", "error");
+    }
+}
+
+// Merge the options
+var opts = Ul.merge({
+    name: nameOpt.value
+  , description: descOpt.value || undefined
+}, otherFields.value);
+
+console.log(opts);
