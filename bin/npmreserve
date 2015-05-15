@@ -10,6 +10,7 @@ var NpmReserve = require("../lib")
 
 // Configuration
 Logger.config.logLevel = 4;
+Logger.config.displayDate = false;
 
 var nameOpt = new Clp.Option(["n", "name"], "The NPM package name.", "name")
   , descOpt = new Clp.Option(["d", "desc"], "The NPM package description.", "description")
@@ -50,4 +51,11 @@ var opts = Ul.merge({
   , description: descOpt.value || undefined
 }, otherFields.value);
 
-console.log(opts);
+// Reserve the things
+Logger.log("Trying to reserve the NPM package. This may take a while.", "info");
+NpmReserve(opts, function (err) {
+    if (err) {
+        return Logger.log(err, "error");
+    }
+    Logger.log("Reserved the name successfully.", "info");
+});
