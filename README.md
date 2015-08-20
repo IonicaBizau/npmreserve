@@ -3,7 +3,7 @@
 > # :warning: STOP, LOOK AND LISTEN :construction:
 > This project is discontinued and deprecated. By *reserving* NPM packages
 > without publishing code, you are violating the NPM terms. For more information
-> please reffer to [*Acceptable Package Content*](https://docs.npmjs.com/policies/conduct#acceptable-package-content)
+> please refer to [*Acceptable Package Content*](https://docs.npmjs.com/policies/conduct#acceptable-package-content)
 
 # npmreserve
 Reserve package names on NPM.
