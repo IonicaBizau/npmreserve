@@ -1,12 +1,13 @@
-![](http://i.imgur.com/67mKyws.png)
+[![npmreserve](http://i.imgur.com/67mKyws.png)](#)
+
+# `$ npmreserve` [![Support this project][donate-now]][paypal-donations]
+
+Reserve package names on NPM.
 
 > # :warning: STOP, LOOK AND LISTEN :construction:
 > This project is discontinued and deprecated. By *reserving* NPM packages
 > without publishing code, you are violating the NPM terms. For more information
 > please refer to [*Acceptable Package Content*](https://docs.npmjs.com/policies/conduct#acceptable-package-content)
-
-# npmreserve
-Reserve package names on NPM.
 
 Sometimes I have ideas about new tools to build but I don't have the needed
 time to implement them. To be sure that *my idea is reserved* I created this
@@ -14,22 +15,25 @@ tiny tool which reserves the name of the package on NPM. :bulb:
 
 ## Installation
 
+You can install the package globally and use it as command line tool:
+
 ```sh
-$ npm install -g npmreserve
+$ npm i -g npmreserve
 ```
 
-### Usage
+Then, run `npmreserve --help` and see what the CLI tool can do.
+
 ```sh
-$ npmreserve -h
+$ npmreserve --help
 Usage: npmreserve [options]
 
 Options:
-  -n, --name <name>          The NPM package name.
-  -d, --desc <description>   The NPM package description.
+  -n, --name <name>          The NPM package name.                             
+  -d, --desc <description>   The NPM package description.                      
   -o, --other-fields <json>  Other package.json fields you want to include. The
-                             input will be parsed as JSON.
-  -h, --help                 Displays this help.
-  -v, --version              Displays version information.
+                             input will be parsed as JSON.                     
+  -h, --help                 Displays this help.                               
+  -v, --version              Displays version information.                     
 
 Examples:
   npmreserve -n 'foo'
@@ -40,26 +44,43 @@ Use this with care. Do not abuse the things too much. Do not spam.
 Documentation can be found at https://github.com/IonicaBizau/npmreserve
 ```
 
+## Example
+
+Here is an example how to use this package as library. To install it locally, as library, you can do that using `npm`:
+
+```sh
+$ npm i npmreserve
+```
+
+```js
+// Dependencies
+var NpmReserve = require("npmreserve");
+
+console.log("Reserving...");
+NpmReserve("aaaaa", function (err) {
+    console.log(err || "Reserved.");
+});
+```
+
 ## Documentation
-### `NpmReserve(options, callback)`
-Reserves a package name on NPM.
 
-#### Params
-- **String|Object** `options`: The package name or the package object itself.
-- **Function** `callback`: The callback function
-
-#### Return
-- **NpmReserve** The `NpmReserve` function.
+For full API reference, see the [DOCUMENTATION.md][docs] file.
 
 ## How to contribute
-1. File an issue in the repository, using the bug tracker, describing the
-   contribution you'd like to make. This will help us to get you started on the
-   right foot.
-2. Fork the project in your account and create a new branch:
-   `your-great-feature`.
-3. Commit your changes in that branch.
-4. Open a pull request, and reference the initial issue in the pull request
-   message.
+Have an idea? Found a bug? See [how to contribute][contributing].
+
+## Where is this library used?
+If you are using this library in one of your projects, add it in this list. :sparkles:
 
 ## License
-See the [LICENSE](./LICENSE) file.
+
+[KINDLY][license] © [Ionică Bizău][website]
+
+[license]: http://ionicabizau.github.io/kindly-license/?author=Ionic%C4%83%20Biz%C4%83u%20%3Cbizauionica@gmail.com%3E&year=2015
+
+[website]: http://ionicabizau.net
+[paypal-donations]: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RVXDDLKKLQRJW
+[donate-now]: http://i.imgur.com/6cMbHOC.png
+
+[contributing]: /CONTRIBUTING.md
+[docs]: /DOCUMENTATION.md
