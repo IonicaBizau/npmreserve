@@ -1,3 +1,4 @@
+
 [![npmreserve](http://i.imgur.com/67mKyws.png)](#)
 
 # `$ npmreserve` [![PayPal](https://img.shields.io/badge/%24-paypal-f39c12.svg)][paypal-donations] [![Version](https://img.shields.io/npm/v/npmreserve.svg)](https://www.npmjs.com/package/npmreserve) [![Downloads](https://img.shields.io/npm/dt/npmreserve.svg)](https://www.npmjs.com/package/npmreserve) [![Get help on Codementor](https://cdn.codementor.io/badges/get_help_github.svg)](https://www.codementor.io/johnnyb?utm_source=github&utm_medium=button&utm_term=johnnyb&utm_campaign=github)
@@ -9,31 +10,36 @@
 > without publishing code, you are violating the NPM terms. For more information
 > please refer to [*Acceptable Package Content*](https://docs.npmjs.com/policies/conduct#acceptable-package-content)
 
+
 Sometimes I have ideas about new tools to build but I don't have the needed
 time to implement them. To be sure that *my idea is reserved* I created this
 tiny tool which reserves the name of the package on NPM. :bulb:
 
-## Installation
+
+## :cloud: Installation
 
 You can install the package globally and use it as command line tool:
+
 
 ```sh
 $ npm i -g npmreserve
 ```
 
+
 Then, run `npmreserve --help` and see what the CLI tool can do.
 
-```sh
+
+```
 $ npmreserve --help
 Usage: npmreserve [options]
 
 Options:
-  -n, --name <name>          The NPM package name.                             
-  -d, --desc <description>   The NPM package description.                      
+  -n, --name <name>          The NPM package name.
+  -d, --desc <description>   The NPM package description.
   -o, --other-fields <json>  Other package.json fields you want to include. The
-                             input will be parsed as JSON.                     
-  -h, --help                 Displays this help.                               
-  -v, --version              Displays version information.                     
+                             input will be parsed as JSON.
+  -h, --help                 Displays this help.
+  -v, --version              Displays version information.
 
 Examples:
   npmreserve -n 'foo'
@@ -44,13 +50,16 @@ Use this with care. Do not abuse the things too much. Do not spam.
 Documentation can be found at https://github.com/IonicaBizau/npmreserve
 ```
 
-## Example
+## :clipboard: Example
+
 
 Here is an example how to use this package as library. To install it locally, as library, you can do that using `npm`:
 
 ```sh
 $ npm i --save npmreserve
 ```
+
+
 
 ```js
 // Dependencies
@@ -62,17 +71,15 @@ NpmReserve("aaaaa", function (err) {
 });
 ```
 
-## Documentation
+## :memo: Documentation
 
 For full API reference, see the [DOCUMENTATION.md][docs] file.
 
-## How to contribute
+## :yum: How to contribute
 Have an idea? Found a bug? See [how to contribute][contributing].
 
-## Where is this library used?
-If you are using this library in one of your projects, add it in this list. :sparkles:
 
-## License
+## :scroll: License
 
 [MIT][license] © [Ionică Bizău][website]
 
