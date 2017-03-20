@@ -1,6 +1,6 @@
 {
   "name": "npmreserve",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "Reserve package names on NPM.",
   "main": "lib/index.js",
   "bin": {
@@ -20,7 +20,7 @@
     "npm",
     "reserve"
   ],
-  "author": "Ionică Bizău <bizauionica@gmail.com> (http://ionicabizau.net)",
+  "author": "Ionică Bizău <bizauionica@gmail.com> (https://ionicabizau.net)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/IonicaBizau/npmreserve/issues"
@@ -63,12 +63,11 @@
     "bin/",
     "app/",
     "lib/",
-    "build/",
     "dist/",
     "src/",
+    "scripts/",
     "resources/",
     "menu/",
-    "scripts/",
     "cli.js",
     "index.js"
   ]
