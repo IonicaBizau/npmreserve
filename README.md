@@ -14,9 +14,7 @@
 
 
 Sometimes I have ideas about new tools to build but I don't have the needed
-
 time to implement them. To be sure that *my idea is reserved* I created this
-
 tiny tool which reserves the name of the package on NPM. :bulb:
 
 
@@ -74,6 +72,15 @@ NpmReserve("aaaaa", function (err) {
     console.log(err || "Reserved.");
 });
 ```
+
+## :question: Get Help
+
+There are few ways to get help:
+
+ 1. Please [post questions on Stack Overflow](https://stackoverflow.com/questions/ask). You can open issues with questions, as long you add a link to your Stack Overflow question.
+ 2. For bug reports and feature requests, open issues. :bug:
+ 3. For direct and quick help from me, you can [use Codementor](https://www.codementor.io/johnnyb). :rocket:
+
 
 ## :memo: Documentation
 
